@@ -1,0 +1,20 @@
+D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fl\crgb_hsv16.cpp.o: \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fl\crgb_hsv16.cpp \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/crgb.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/stdint.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/int.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/platforms/int.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/platforms/esp/int.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/chsv.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/hsv.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/namespace.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/color.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/lib8tion/types.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/force_inline.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/type_traits.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/move.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/hsv2rgb.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/ease.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fastled_progmem.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/platforms/null_progmem.h \
+ C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/hsv16.h
