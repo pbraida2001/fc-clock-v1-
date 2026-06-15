@@ -421,13 +421,7 @@ void setup() {
 void wifiTask(void *pvParameters) {
 
     sensors_setup();
-    delay(200);
-    get_sensor_BH1750();
-    delay(200);
-    get_sensor_AHT10(0);
-    delay(200);
-    get_sensor_AHT10(1);
-
+  
     for (;;) {
 
         if(!firmware_update) {

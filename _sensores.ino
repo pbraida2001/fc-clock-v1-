@@ -80,8 +80,8 @@ int get_sensor_BH1750(void) {
 
   sensores.light=lux;
 
-  Serial.print("Lux: ");
-  Serial.println(lux);
+  //Serial.print("Lux: ");
+  //Serial.println(lux);
 
   return((int)lux);
 
@@ -97,15 +97,15 @@ float get_sensor_AHT10(int tipo) {
 
   if(tipo==0) {
 
-    Serial.print("Temperature: ");
-    Serial.println(AHT10_temp.temperature);
+    //Serial.print("Temperature: ");
+    //Serial.println(AHT10_temp.temperature);
     sensores.temp=AHT10_temp.temperature-sensores.temp_offset;
     return(sensores.temp);    
 
   } else {
 
-    Serial.print("Humidity: ");
-    Serial.println(AHT10_humid.relative_humidity);
+    //Serial.print("Humidity: ");
+    //Serial.println(AHT10_humid.relative_humidity);
     sensores.humid=AHT10_humid.relative_humidity;
     return(sensores.humid);
 

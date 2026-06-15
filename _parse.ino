@@ -21,6 +21,10 @@
 //{"command":"setClockDate","date":0,"type":0}
 
 //{"command":"setSensorsMode","mode":0,"type":0}   // 0-Desliga, 1-Temperatura, 2-Umidade, 3-Temperatura+Umidade
+
+//{"command":"getSensors","type":0} 
+
+
 //{"command":"setTempScale","scale":0,"type":0} // 0-Celsius, 1-Fahrenheit
 
 //{"command":"setStrip2Effect","effect":1,"type":0}  // 0=off 1=rainbow 2=chase 3=comet 4=breathe 5=strobe 6=colorwipe 7=twinkle 8=fire 9=scanner 10=fillfade 11=alternating 12=solid 13=rainbowchase 14=bounce 15=meteor 16=sparkle 17=runninglights 18=colorcycle 19=pacifica 20=dualscanner 21=lava 22=ice 23=wipeinout 24=fadeinout 25=theaterchase 26=lightning 27=confetti 28=gradientshift 29=plasma 30=ripple 31=cylon 32=sinelon 33=pixelstack 34=pixelrain 35=knightrider 36=colorsegments 37=shootingstar 38=heartbeat 39=marquee 40=cascade 41=sparkleburst 42=dualcolorwipe 43=northernlights 44=rainbowsegments 45=pulsewave 46=orbit 47=colordrip 48=firefly 49=glitterrainbow 50=popcorn 51=sunrise 52=matrix
@@ -529,6 +533,32 @@ void parse_new_package(void) {
       preferences.putString("tunit",String(scale));
 
       preferences.end();
+
+    } else if(comando=="getSensors") {
+
+      String aux_rip;
+
+      get_sensor_BH1750();
+      get_sensor_AHT10(0);
+      get_sensor_AHT10(1);
+
+      aux_rip="{\"command\":\"getSensors\",\"type\":1,\"temp\":"+String(sensores.temp)+",\"humid\":"+String(sensores.humid)+",\"light\":"+String(sensores.light)+"}";
+
+      if(pkgbuffer[read_pkg].type=="UDP") { 
+  
+        send_message_udp(aux_rip,pkgbuffer[read_pkg].remote_ip,pkgbuffer[read_pkg].local_port);
+
+      } else {
+
+        String rc(aux_rip);
+        char aux_aux[300];
+
+        rc.toCharArray(aux_aux,rc.length()+1);  
+
+        pkgbuffer[read_pkg].client->add(aux_aux,rc.length());
+        pkgbuffer[read_pkg].client->send();
+
+      }
 
     }
 

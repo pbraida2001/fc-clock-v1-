@@ -322,9 +322,9 @@ SENSOR_DATA sensores;
 void setup();
 #line 421 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\fc_clock_v1.ino"
 void wifiTask(void *pvParameters);
-#line 461 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\fc_clock_v1.ino"
+#line 455 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\fc_clock_v1.ino"
 void fastledTask(void *pvParameters);
-#line 491 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\fc_clock_v1.ino"
+#line 485 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\fc_clock_v1.ino"
 void loop();
 #line 10 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_ios.ino"
 void ios_setup(void);
@@ -494,7 +494,7 @@ void check_config_mode(void);
 void read_config();
 #line 539 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_netconfig_page.ino"
 String index_processor(const String& var);
-#line 32 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_parse.ino"
+#line 36 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_parse.ino"
 void parse_new_package(void);
 #line 275 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_reset_page.ino"
 String reset_processor(const String& var);
@@ -656,13 +656,7 @@ void setup() {
 void wifiTask(void *pvParameters) {
 
     sensors_setup();
-    delay(200);
-    get_sensor_BH1750();
-    delay(200);
-    get_sensor_AHT10(0);
-    delay(200);
-    get_sensor_AHT10(1);
-
+  
     for (;;) {
 
         if(!firmware_update) {
@@ -3754,6 +3748,10 @@ String index_processor(const String& var) {
 //{"command":"setClockDate","date":0,"type":0}
 
 //{"command":"setSensorsMode","mode":0,"type":0}   // 0-Desliga, 1-Temperatura, 2-Umidade, 3-Temperatura+Umidade
+
+//{"command":"getSensors","type":0} 
+
+
 //{"command":"setTempScale","scale":0,"type":0} // 0-Celsius, 1-Fahrenheit
 
 //{"command":"setStrip2Effect","effect":1,"type":0}  // 0=off 1=rainbow 2=chase 3=comet 4=breathe 5=strobe 6=colorwipe 7=twinkle 8=fire 9=scanner 10=fillfade 11=alternating 12=solid 13=rainbowchase 14=bounce 15=meteor 16=sparkle 17=runninglights 18=colorcycle 19=pacifica 20=dualscanner 21=lava 22=ice 23=wipeinout 24=fadeinout 25=theaterchase 26=lightning 27=confetti 28=gradientshift 29=plasma 30=ripple 31=cylon 32=sinelon 33=pixelstack 34=pixelrain 35=knightrider 36=colorsegments 37=shootingstar 38=heartbeat 39=marquee 40=cascade 41=sparkleburst 42=dualcolorwipe 43=northernlights 44=rainbowsegments 45=pulsewave 46=orbit 47=colordrip 48=firefly 49=glitterrainbow 50=popcorn 51=sunrise 52=matrix
@@ -4263,6 +4261,32 @@ void parse_new_package(void) {
 
       preferences.end();
 
+    } else if(comando=="getSensors") {
+
+      String aux_rip;
+
+      get_sensor_BH1750();
+      get_sensor_AHT10(0);
+      get_sensor_AHT10(1);
+
+      aux_rip="{\"command\":\"getSensors\",\"type\":1,\"temp\":"+String(sensores.temp)+",\"humid\":"+String(sensores.humid)+",\"light\":"+String(sensores.light)+"}";
+
+      if(pkgbuffer[read_pkg].type=="UDP") { 
+  
+        send_message_udp(aux_rip,pkgbuffer[read_pkg].remote_ip,pkgbuffer[read_pkg].local_port);
+
+      } else {
+
+        String rc(aux_rip);
+        char aux_aux[300];
+
+        rc.toCharArray(aux_aux,rc.length()+1);  
+
+        pkgbuffer[read_pkg].client->add(aux_aux,rc.length());
+        pkgbuffer[read_pkg].client->send();
+
+      }
+
     }
 
     read_pkg++;
@@ -4642,8 +4666,8 @@ int get_sensor_BH1750(void) {
 
   sensores.light=lux;
 
-  Serial.print("Lux: ");
-  Serial.println(lux);
+  //Serial.print("Lux: ");
+  //Serial.println(lux);
 
   return((int)lux);
 
@@ -4659,15 +4683,15 @@ float get_sensor_AHT10(int tipo) {
 
   if(tipo==0) {
 
-    Serial.print("Temperature: ");
-    Serial.println(AHT10_temp.temperature);
+    //Serial.print("Temperature: ");
+    //Serial.println(AHT10_temp.temperature);
     sensores.temp=AHT10_temp.temperature-sensores.temp_offset;
     return(sensores.temp);    
 
   } else {
 
-    Serial.print("Humidity: ");
-    Serial.println(AHT10_humid.relative_humidity);
+    //Serial.print("Humidity: ");
+    //Serial.println(AHT10_humid.relative_humidity);
     sensores.humid=AHT10_humid.relative_humidity;
     return(sensores.humid);
 
