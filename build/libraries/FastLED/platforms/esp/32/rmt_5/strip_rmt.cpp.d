@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\platforms\esp\32\rmt_5\strip_rmt.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\platforms\esp\32\rmt_5\strip_rmt.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\platforms\esp\32\rmt_5\strip_rmt.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/stdint.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/third_party/espressif/led_strip/src/enabled.h \

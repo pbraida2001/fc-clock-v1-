@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fl\engine_events.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\fl\engine_events.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fl\engine_events.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/engine_events.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/namespace.h \

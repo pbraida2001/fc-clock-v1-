@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\ESP32Time\ESP32Time.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\ESP32Time\ESP32Time.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\ESP32Time\ESP32Time.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\ESP32Time\ESP32Time.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32/Arduino.h \

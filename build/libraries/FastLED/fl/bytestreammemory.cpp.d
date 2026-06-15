@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fl\bytestreammemory.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\fl\bytestreammemory.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fl\bytestreammemory.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/int.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/stdint.h \

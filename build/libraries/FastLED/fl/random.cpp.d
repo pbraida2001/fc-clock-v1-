@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fl\random.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\fl\random.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fl\random.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/random.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/stdint.h \

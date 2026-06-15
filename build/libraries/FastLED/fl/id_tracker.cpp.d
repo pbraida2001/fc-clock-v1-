@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fl\id_tracker.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\fl\id_tracker.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fl\id_tracker.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/id_tracker.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/hash_map.h \

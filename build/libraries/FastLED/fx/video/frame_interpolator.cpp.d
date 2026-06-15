@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\fx\video\frame_interpolator.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\fx\video\frame_interpolator.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\fx\video\frame_interpolator.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fx/video/frame_interpolator.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/map.h \

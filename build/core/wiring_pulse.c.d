@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\core\wiring_pulse.c.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\core\wiring_pulse.c.o: \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\wiring_pulse.c \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\wiring_private.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\Arduino.h \

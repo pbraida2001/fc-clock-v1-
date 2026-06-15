@@ -221,7 +221,7 @@ void read_config() {
 
   if(preferences.getString("brigh","")=="") {
 
-    preferences.putString("brigh","10");
+    preferences.putString("brigh","16");
     stripBrightness=preferences.getString("brigh","").toInt();
 
   }
@@ -298,6 +298,57 @@ void read_config() {
 
   }  
 
+  cfg.cauto=preferences.getString("cauto","").toInt();
+
+  if(preferences.getString("cauto","")=="") {
+
+    preferences.putString("cauto","0");
+    cfg.cauto=preferences.getString("cauto","").toInt();
+
+  }
+
+  cfg.cstrip2effect=preferences.getString("cstrip2fx","").toInt();
+
+  if(preferences.getString("cstrip2fx","")=="") {
+
+    preferences.putString("cstrip2fx","1");
+    cfg.cstrip2effect=1;
+
+  }
+
+  strip2_color_r=preferences.getString("s2cr","").toInt();
+  if(preferences.getString("s2cr","")=="") { preferences.putString("s2cr","255"); strip2_color_r=255; }
+
+  strip2_color_g=preferences.getString("s2cg","").toInt();
+  if(preferences.getString("s2cg","")=="") { preferences.putString("s2cg","255"); strip2_color_g=255; }
+
+  strip2_color_b=preferences.getString("s2cb","").toInt();
+  if(preferences.getString("s2cb","")=="") { preferences.putString("s2cb","255"); strip2_color_b=255; }
+
+  strip2Brightness=preferences.getString("s2brigh","").toInt();
+  if(preferences.getString("s2brigh","")=="") { preferences.putString("s2brigh","255"); strip2Brightness=255; }
+
+  strip2Speed=preferences.getString("s2spd","").toInt();
+  if(preferences.getString("s2spd","")=="") { preferences.putString("s2spd","10"); strip2Speed=10; } 
+
+  sensores.temp_unit=preferences.getString("tunit","").toInt();
+
+  if(preferences.getString("tunit","")=="") {
+
+    preferences.putString("tunit","0");
+    sensores.temp_unit=0;
+
+  }
+
+  sensores.mode=preferences.getString("smode","").toInt();
+
+  if(preferences.getString("smode","")=="") {
+
+    preferences.putString("smode","3");
+    sensores.mode=3;
+
+  }  
+
   size_t tmhpref=preferences.freeEntries();
 
   Serial.println("---------------------------------------------------------------------------------");
@@ -371,7 +422,12 @@ void read_config() {
   Serial.print("Clock Mode : ");
   Serial.println(cfg.cmode);
   Serial.print("Clock Date : ");
-  Serial.println(cfg.cdate);  
+  Serial.println(cfg.cdate); 
+  
+  Serial.print("Sensor Mode : ");
+  Serial.println(sensores.mode);
+  Serial.print("Temperature Unit : ");
+  Serial.println(sensores.temp_unit); 
 
   Serial.println("---------------------------------------------------------------------------------"); 
   

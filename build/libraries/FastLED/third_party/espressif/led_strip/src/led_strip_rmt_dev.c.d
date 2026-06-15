@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\third_party\espressif\led_strip\src\led_strip_rmt_dev.c.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\third_party\espressif\led_strip\src\led_strip_rmt_dev.c.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\third_party\espressif\led_strip\src\led_strip_rmt_dev.c \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\third_party\espressif\led_strip\src\enabled.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/qio_qspi/include/sdkconfig.h \

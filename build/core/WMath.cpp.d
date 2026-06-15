@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\core\WMath.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\core\WMath.cpp.o: \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\WMath.cpp \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/include/esp_system/include/esp_system.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/include/esp_common/include/esp_err.h \

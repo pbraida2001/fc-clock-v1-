@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\core\main.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\core\main.cpp.o: \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\main.cpp \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/FreeRTOSConfig.h \

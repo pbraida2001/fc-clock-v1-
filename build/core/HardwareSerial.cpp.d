@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\core\HardwareSerial.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\core\HardwareSerial.cpp.o: \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\HardwareSerial.cpp \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\variants\esp32/pins_arduino.h \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17\cores\esp32\io_pin_remap.h \

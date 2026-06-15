@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\platforms\shared\ui\json\json_console.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\platforms\shared\ui\json\json_console.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\platforms\shared\ui\json\json_console.cpp \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/fl/sketch_macros.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src/platforms/shared/ui/json/json_console.h \

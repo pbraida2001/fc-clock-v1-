@@ -1,4 +1,4 @@
-D:\projetos\flex\ controls\fc-clock\firmware\fc-clock(v1)\build\libraries\FastLED\platforms\esp\32\i2s\i2s_esp32dev.cpp.o: \
+D:\projetos\pbn\pbn-clock\firmware\fc_clock_v1\build\libraries\FastLED\platforms\esp\32\i2s\i2s_esp32dev.cpp.o: \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\platforms\esp\32\i2s\i2s_esp32dev.cpp \
  C:\Users\pbrai\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.17/tools/sdk/esp32/qio_qspi/include/sdkconfig.h \
  C:\Users\pbrai\OneDrive\Documentos\Arduino\libraries\FastLED\src\platforms\esp\32\i2s\i2s_esp32dev.h \

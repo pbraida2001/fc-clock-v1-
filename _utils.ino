@@ -86,10 +86,10 @@ void check_update(void) {
   static bool stripChecked = false;
 
   if (update_status) {
-    // Garante strip suficiente para todos os dígitos e dois pontos (4x7 + 2 = 30 LEDs)
+    // Garante strip suficiente para todos os dígitos, extras e indicadores (36 LEDs)
     if (!stripChecked) {
 
-      long required = 30;
+      long required = 36;
       
       if (stripPixels < required) {
       
@@ -101,22 +101,28 @@ void check_update(void) {
     
     }
 
-    // Mantém dígitos de unidades/dezenas e dois pontos apagados durante update
+    // Mantém D1 (dezenas de minutos) apagado durante update
     for (uint8_t seg = 0; seg < 7; seg++) {
-    
-      if (stripPixels > (0 + 7 + seg)) leds[0 + 7 + seg] = CRGB::Black;     // dígito 1 (dezenas de minutos)
-      // NÃO apagar dígitos 2 e 3 aqui; letras F/U são estáticas nesses dígitos
+      if (stripPixels > (7 + seg)) leds[7 + seg] = CRGB::Black;
     }
-    
-    if (stripPixels > (0 + 14)) leds[0 + 14] = CRGB::Black;                 // dois pontos
-    if (stripPixels > (0 + 15)) leds[0 + 15] = CRGB::Black;
 
-    // Adiciona letras durante update: D3 (milhares) = 'F', D2 (centenas) = 'U'
+    // LEDs extras (+14, +17) e dois pontos (+15, +16) apagados
+    if (stripPixels > 14) leds[14] = CRGB::Black;
+    if (stripPixels > 15) leds[15] = CRGB::Black;
+    if (stripPixels > 16) leds[16] = CRGB::Black;
+    if (stripPixels > 17) leds[17] = CRGB::Black;
+
+    // LEDs finais (+32..+35) apagados
+    if (stripPixels > 32) leds[32] = CRGB::Black;
+    if (stripPixels > 33) leds[33] = CRGB::Black;
+    if (stripPixels > 34) leds[34] = CRGB::Black;
+    if (stripPixels > 35) leds[35] = CRGB::Black;
+
+    // Letras durante update:
+    // D3 (startLed+25) = 'F' | D2 (startLed+18) = 'U'
     // Mapeamento de segmentos: 0=SupDir,1=Topo,2=SupEsq,3=Meio,4=InfDir,5=Base,6=InfEsq
-    // 'F' = Topo, SupEsq, Meio, InfEsq
-    // 'U' = SupDir, SupEsq, InfEsq, Base, InfDir (inclui segmento 0)
-    const uint16_t startThousands = 0 + 23;
-    const uint16_t startHundreds  = 0 + 16;
+    const uint16_t startThousands = 25;  // D3
+    const uint16_t startHundreds  = 18;  // D2
     for (uint8_t s = 0; s < 7; s++) {
       if (stripPixels > (startThousands + s)) {
         bool onF = (s == 1) || (s == 2) || (s == 3) || (s == 6);
@@ -129,7 +135,7 @@ void check_update(void) {
     }
 
     // Animação: acende um segmento por vez em vermelho no primeiro dígito
-    if (millis() - lastAnimUpdate >= (unsigned long)(speed * 50)) { // ~500ms com speed=10
+    if (millis() - lastAnimUpdate >= (unsigned long)(speed * 100)) { // ~1000ms com speed=10
       // Apaga todos os segmentos do primeiro dígito (apenas dígito 0)
       for (uint8_t s = 0; s < 7; s++) {
         leds[0 + s] = CRGB::Black;
@@ -139,6 +145,8 @@ void check_update(void) {
 
       animIdx = (animIdx + 1) % 6;
       lastAnimUpdate = millis();
+      // Garante strip2 apagado durante o update
+      fill_solid(leds2, STRIP2_LEDS, CRGB::Black);
       FastLED.show();
     }
 
