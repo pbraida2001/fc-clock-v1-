@@ -364,125 +364,125 @@ void setClockDisplayMode(uint8_t mode);
 void setClockDateCycle(uint8_t mode);
 #line 526 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void displayTimeFromRTC(uint16_t startLed);
-#line 832 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 839 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void fiveDisplayCounter0to99999(uint16_t startLed);
-#line 874 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 881 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void sixDisplayCounter0to999999(uint16_t startLed);
-#line 940 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 947 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void setStrip2Color(uint8_t r, uint8_t g, uint8_t b);
-#line 946 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 953 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void setStrip2Brightness(uint8_t brightness);
-#line 952 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 959 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void setStrip2Speed(uint8_t spd);
-#line 956 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
-void setStrip2Effect(uint8_t effect);
 #line 963 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+void setStrip2Effect(uint8_t effect);
+#line 970 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void clearStrip2();
-#line 971 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 978 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void ledChase36();
-#line 987 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 994 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void rainbowStrip2();
-#line 999 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1006 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void cometStrip2();
-#line 1011 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1018 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void breatheStrip2();
-#line 1026 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1033 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void strobeStrip2();
-#line 1037 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1044 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void colorWipeStrip2();
-#line 1056 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1063 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void twinkleStrip2();
-#line 1070 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1077 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void fireStrip2();
-#line 1087 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1094 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void scannerStrip2();
-#line 1104 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1111 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void fillFadeStrip2();
-#line 1124 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1131 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void alternatingStrip2();
-#line 1137 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1144 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void solidColorStrip2();
-#line 1142 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1149 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void rainbowChaseStrip2();
-#line 1157 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1164 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void bounceStrip2();
-#line 1172 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1179 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void meteorStrip2();
-#line 1195 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1202 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void sparkleStrip2();
-#line 1209 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1216 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void runningLightsStrip2();
-#line 1224 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1231 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void colorCycleStrip2();
-#line 1236 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1243 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void pacificaStrip2();
-#line 1253 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1260 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void dualScannerStrip2();
-#line 1274 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1281 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void lavaStrip2();
-#line 1288 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1295 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void iceStrip2();
-#line 1308 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1315 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void wipeInOutStrip2();
-#line 1334 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1341 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void fadeInOutStrip2();
-#line 1350 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1357 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void theaterChaseStrip2();
-#line 1363 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1370 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void lightningStrip2();
-#line 1384 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1391 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void confettiStrip2();
-#line 1396 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1403 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void gradientShiftStrip2();
-#line 1410 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1417 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void plasmaStrip2();
-#line 1426 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1433 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void rippleStrip2();
-#line 1443 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1450 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void cylonStrip2();
-#line 1462 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1469 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void sinelonStrip2();
-#line 1475 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1482 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void pixelStackStrip2();
-#line 1500 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1507 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void pixelRainStrip2();
-#line 1515 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1522 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void knightRiderStrip2();
-#line 1537 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1544 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void colorSegmentsStrip2();
-#line 1553 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1560 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void shootingStarStrip2();
-#line 1574 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1581 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void heartbeatStrip2();
-#line 1590 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1597 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void marqueeStrip2();
-#line 1603 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1610 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void cascadeStrip2();
-#line 1618 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1625 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void sparkleBurstStrip2();
-#line 1642 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1649 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void dualColorWipeStrip2();
-#line 1669 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1676 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void northernLightsStrip2();
-#line 1684 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1691 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void rainbowSegmentsStrip2();
-#line 1700 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1707 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void pulseWaveStrip2();
-#line 1715 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1722 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void orbitStrip2();
-#line 1730 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1737 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void colorDripStrip2();
-#line 1749 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1756 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void fireflyStrip2();
-#line 1766 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1773 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void glitterRainbowStrip2();
-#line 1783 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1790 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void popcornStrip2();
-#line 1797 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1804 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void sunriseStrip2();
-#line 1813 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1820 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void matrixStrip2();
-#line 1829 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
+#line 1836 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_leds.ino"
 void runStrip2Effect();
 #line 7 "D:\\projetos\\pbn\\pbn-clock\\firmware\\fc_clock_v1\\_memory.ino"
 void clear_cfg_memory();
@@ -1283,6 +1283,8 @@ void displayTimeFromRTC(uint16_t startLed) {
   static unsigned long lastAnimUpdate = 0;
   static uint8_t animIdx = 0;          // índice na ordem de segmentos
   static const uint8_t animOrder[6] = {0, 1, 2, 6, 5, 4}; // ordem solicitada; pula o segmento do meio (3)
+  static float cachedTemp = 0.0f;      // temperatura lida uma vez por ciclo
+  static float cachedHum  = 0.0f;      // humidade lida uma vez por ciclo
 
   // Garante tamanho mínimo de strip para HH:MM com dois pontos e LEDs extras (36 LEDs)
   // Layout: [D0:7][D1:7][extra][col1][col2][extra][D2:7][D3:7][4xreserv]
@@ -1369,6 +1371,9 @@ void displayTimeFromRTC(uint16_t startLed) {
       dateCycleActive = true;
       dateCyclePhase = 1; // dd/mm
       dateCyclePhaseStartMs = now;
+      // Lê sensores uma única vez para todo o ciclo
+      cachedTemp = get_sensor_AHT10(0);
+      cachedHum  = get_sensor_AHT10(1);
     }
 
     if (dateCycleActive) {
@@ -1442,7 +1447,7 @@ void displayTimeFromRTC(uint16_t startLed) {
         // Fase 3: Temperatura no formato XX.X C (Celsius) ou XX.X F (Fahrenheit)
         // +14: separador decimal (LED anterior aos dois pontos)
         // +33 (antipenúltimo): aceso durante exibição de temp/hum
-        float tempVal = get_sensor_AHT10(0); // sempre retorna °C
+        float tempVal = cachedTemp; // valor lido uma vez no início do ciclo (sempre °C)
         if (sensores.temp_unit == 1) {
           tempVal = tempVal * 9.0f / 5.0f + 32.0f; // converte para °F
         }
@@ -1495,15 +1500,17 @@ void displayTimeFromRTC(uint16_t startLed) {
         return; // não renderiza hora enquanto ciclo ativo
       }
       else if (dateCyclePhase == 4) {
-        // Fase 4: Humidade no formato 99  H
+        // Fase 4: Humidade no formato XX.X H
+        // +14: separador decimal (igual à temperatura)
         // +33 (antipenúltimo): aceso durante exibição de temp/hum
-        float humVal = get_sensor_AHT10(1);
-        if (humVal < 0.0f)  humVal = 0.0f;
-        if (humVal > 99.0f) humVal = 99.0f;
-        uint8_t hum = (uint8_t)(humVal + 0.5f);
-        if (hum > 99) hum = 99;
+        float humVal = cachedHum; // valor lido uma vez no início do ciclo
+        if (humVal < 0.0f)   humVal = 0.0f;
+        if (humVal > 99.9f)  humVal = 99.9f;
+        uint8_t humInt = (uint8_t)humVal;
+        uint8_t humDec = (uint8_t)((humVal - (float)humInt) * 10.0f + 0.5f);
+        if (humDec > 9) humDec = 9;
 
-        leds[startLed + 14] = CRGB::Black;
+        leds[startLed + 14] = currentStripColor; // separador decimal
         leds[startLed + 15] = CRGB::Black;
         leds[startLed + 16] = CRGB::Black;
         leds[startLed + 17] = CRGB::Black;
@@ -1512,12 +1519,12 @@ void displayTimeFromRTC(uint16_t startLed) {
         leds[startLed + 34] = CRGB::Black;
         leds[startLed + 35] = CRGB::Black;
 
-        // D3 (startLed+25): dezenas da humidade
-        setSevenSegmentDisplay(3, hum / 10, startLed + 25);
-        // D2 (startLed+18): unidades da humidade
-        setSevenSegmentDisplay(2, hum % 10, startLed + 18);
-        // D1 (startLed+7): apagado (pula um dígito)
-        for (uint8_t s = 0; s < 7; s++) leds[startLed + 7 + s] = CRGB::Black;
+        // D3 (startLed+25): dezenas da parte inteira
+        setSevenSegmentDisplay(3, humInt / 10, startLed + 25);
+        // D2 (startLed+18): unidades da parte inteira
+        setSevenSegmentDisplay(2, humInt % 10, startLed + 18);
+        // D1 (startLed+7): dígito decimal
+        setSevenSegmentDisplay(1, humDec, startLed + 7);
         // D0 (startLed): letra 'H' — SupDir(0), SupEsq(2), Meio(3), InfDir(4), InfEsq(6)
         for (uint8_t s = 0; s < 7; s++) {
           bool onH = (s == 0) || (s == 2) || (s == 3) || (s == 4) || (s == 6);

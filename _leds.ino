@@ -532,6 +532,8 @@ void displayTimeFromRTC(uint16_t startLed) {
   static unsigned long lastAnimUpdate = 0;
   static uint8_t animIdx = 0;          // índice na ordem de segmentos
   static const uint8_t animOrder[6] = {0, 1, 2, 6, 5, 4}; // ordem solicitada; pula o segmento do meio (3)
+  static float cachedTemp = 0.0f;      // temperatura lida uma vez por ciclo
+  static float cachedHum  = 0.0f;      // humidade lida uma vez por ciclo
 
   // Garante tamanho mínimo de strip para HH:MM com dois pontos e LEDs extras (36 LEDs)
   // Layout: [D0:7][D1:7][extra][col1][col2][extra][D2:7][D3:7][4xreserv]
@@ -618,6 +620,9 @@ void displayTimeFromRTC(uint16_t startLed) {
       dateCycleActive = true;
       dateCyclePhase = 1; // dd/mm
       dateCyclePhaseStartMs = now;
+      // Lê sensores uma única vez para todo o ciclo
+      cachedTemp = get_sensor_AHT10(0);
+      cachedHum  = get_sensor_AHT10(1);
     }
 
     if (dateCycleActive) {
@@ -691,7 +696,7 @@ void displayTimeFromRTC(uint16_t startLed) {
         // Fase 3: Temperatura no formato XX.X C (Celsius) ou XX.X F (Fahrenheit)
         // +14: separador decimal (LED anterior aos dois pontos)
         // +33 (antipenúltimo): aceso durante exibição de temp/hum
-        float tempVal = get_sensor_AHT10(0); // sempre retorna °C
+        float tempVal = cachedTemp; // valor lido uma vez no início do ciclo (sempre °C)
         if (sensores.temp_unit == 1) {
           tempVal = tempVal * 9.0f / 5.0f + 32.0f; // converte para °F
         }
@@ -744,15 +749,17 @@ void displayTimeFromRTC(uint16_t startLed) {
         return; // não renderiza hora enquanto ciclo ativo
       }
       else if (dateCyclePhase == 4) {
-        // Fase 4: Humidade no formato 99  H
+        // Fase 4: Humidade no formato XX.X H
+        // +14: separador decimal (igual à temperatura)
         // +33 (antipenúltimo): aceso durante exibição de temp/hum
-        float humVal = get_sensor_AHT10(1);
-        if (humVal < 0.0f)  humVal = 0.0f;
-        if (humVal > 99.0f) humVal = 99.0f;
-        uint8_t hum = (uint8_t)(humVal + 0.5f);
-        if (hum > 99) hum = 99;
+        float humVal = cachedHum; // valor lido uma vez no início do ciclo
+        if (humVal < 0.0f)   humVal = 0.0f;
+        if (humVal > 99.9f)  humVal = 99.9f;
+        uint8_t humInt = (uint8_t)humVal;
+        uint8_t humDec = (uint8_t)((humVal - (float)humInt) * 10.0f + 0.5f);
+        if (humDec > 9) humDec = 9;
 
-        leds[startLed + 14] = CRGB::Black;
+        leds[startLed + 14] = currentStripColor; // separador decimal
         leds[startLed + 15] = CRGB::Black;
         leds[startLed + 16] = CRGB::Black;
         leds[startLed + 17] = CRGB::Black;
@@ -761,12 +768,12 @@ void displayTimeFromRTC(uint16_t startLed) {
         leds[startLed + 34] = CRGB::Black;
         leds[startLed + 35] = CRGB::Black;
 
-        // D3 (startLed+25): dezenas da humidade
-        setSevenSegmentDisplay(3, hum / 10, startLed + 25);
-        // D2 (startLed+18): unidades da humidade
-        setSevenSegmentDisplay(2, hum % 10, startLed + 18);
-        // D1 (startLed+7): apagado (pula um dígito)
-        for (uint8_t s = 0; s < 7; s++) leds[startLed + 7 + s] = CRGB::Black;
+        // D3 (startLed+25): dezenas da parte inteira
+        setSevenSegmentDisplay(3, humInt / 10, startLed + 25);
+        // D2 (startLed+18): unidades da parte inteira
+        setSevenSegmentDisplay(2, humInt % 10, startLed + 18);
+        // D1 (startLed+7): dígito decimal
+        setSevenSegmentDisplay(1, humDec, startLed + 7);
         // D0 (startLed): letra 'H' — SupDir(0), SupEsq(2), Meio(3), InfDir(4), InfEsq(6)
         for (uint8_t s = 0; s < 7; s++) {
           bool onH = (s == 0) || (s == 2) || (s == 3) || (s == 4) || (s == 6);
